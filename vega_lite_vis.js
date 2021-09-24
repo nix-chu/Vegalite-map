@@ -1,5 +1,5 @@
-let map = "mag.vg.json";
+let theMap = "map.vg.json";
 
-vegaEmbed("#map", map).then(function(result) {
+vegaEmbed("#theMap", theMap).then(function(result) {
 
 }).catch(console.error);

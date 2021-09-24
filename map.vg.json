@@ -2,13 +2,12 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 500,
-    "title": "I dont know yet",
-    "projection": { "type": "equalEarth" },
+    "projection": { "type": "albersUsa" },
     "data": {
         "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/usa.topojson",
         "format": {
             "type": "topojson",
-            "feature": "usa"
+            "feature": "states"
         }
     },
     "transform": [
@@ -28,10 +27,10 @@
         "color": {
             "field": "total_votes",
             "type": "quantitative",
+            "title": "Total Votes (log)",
             "scale": {
-                "type": "threshold",
-                "domain": [10000, 100000, 500000],
-                "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+                "type": "log",
+                "range": ["#ccece6", "#005824"]
             }
         },
         "tooltip": [
@@ -42,7 +41,8 @@
             },
             {
                 "field": "total_votes",
-                "type": "quantitative"
+                "type": "quantitative",
+                "title": "Total Votes"
             }
         ]
     }
