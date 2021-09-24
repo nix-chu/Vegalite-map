@@ -4,20 +4,16 @@
     "height": 500,
     "title": "I dont know yet",
     "projection": { "type": "equalEarth" },
-    "layer": [
+    "data": {
+        "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/north_america.topo.json",
+        "format": {
+            "type": "topojson",
+            "feature": "north_america.geo"
+        }
+    },
+    "transform": [
         {
-            "data": {
-                "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/president_state.csv",
-                "format": {
-                    "type": "topojson",
-                    "feature": "north_america.geo"
-                }
-            },
-            "mark": {
-                "type": "geoshape",
-                "fill": "lightgray",
-                "stroke": "white"
-            }
+            "lookup": ""
         }
     ]
 }
