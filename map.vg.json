@@ -13,7 +13,32 @@
     },
     "transform": [
         {
-            "lookup": ""
+            "lookup": "properties.name",
+            "from": {
+                "data": {
+                    "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/president_state.csv"
+                },
+                "key": "state",
+                "fields": [ "total_votes" ]
+            }
         }
-    ]
+    ],
+    "mark": { "type": "geoshape" },
+    "encoding": {
+        "color": {
+            "field": "Total Votes",
+            "type": "quantitative"
+        },
+        "tooltip": [
+            {
+                "field": "properties.name", 
+                "type": "nominal",
+                "title": "Country"
+            },
+            {
+                "field": "total_votes",
+                "type": "quantitative"
+            }
+        ]
+    }
 }
