@@ -5,7 +5,7 @@
     "title": "I dont know yet",
     "projection": { "type": "equalEarth" },
     "data": {
-        "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/north_america.topo.json",
+        "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/usa.topo.json",
         "format": {
             "type": "topojson",
             "feature": "north_america.geo"
