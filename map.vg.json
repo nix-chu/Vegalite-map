@@ -5,15 +5,15 @@
     "title": "I dont know yet",
     "projection": { "type": "equalEarth" },
     "data": {
-        "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/usa.topo.json",
+        "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/usa.topojson",
         "format": {
             "type": "topojson",
-            "feature": "north_america.geo"
+            "feature": "usa"
         }
     },
     "transform": [
         {
-            "lookup": "properties.name",
+            "lookup": "name",
             "from": {
                 "data": {
                     "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/president_state.csv"
@@ -26,12 +26,17 @@
     "mark": { "type": "geoshape" },
     "encoding": {
         "color": {
-            "field": "Total Votes",
-            "type": "quantitative"
+            "field": "total_votes",
+            "type": "quantitative",
+            "scale": {
+                "type": "threshold",
+                "domain": [10000, 100000, 500000],
+                "range": ["#fdbe85", "#fd8d3c", "#e6550d", "#a63603"]
+            }
         },
         "tooltip": [
             {
-                "field": "properties.name", 
+                "field": "name", 
                 "type": "nominal",
                 "title": "Country"
             },
