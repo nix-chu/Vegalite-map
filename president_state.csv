@@ -1,53 +1,52 @@
-state,total_votes
-Delaware,504010
-District of Columbia,344356
-Florida,11067456
-Georgia,4997716
-Hawaii,574469
-Idaho,868106
-Illinois,6038843
-Indiana,3033198
-Iowa,1690871
-Kansas,1375304
-Kentucky,2136768
-Louisiana,2148062
-Maine,819461
-Maryland,3037030
-Massachusetts,3631402
-Michigan,5539302
-Minnesota,3277171
-Mississippi,1315182
-Missouri,3025962
-Montana,605750
-Nebraska,956379
-Nevada,1405376
-New Hampshire,804430
-New Jersey,4564234
-New Mexico,923965
-New York,8613546
-North Carolina,5524801
-North Dakota,361819
-Ohio,5922202
-Oklahoma,1560699
-Oregon,2374321
-Pennsylvania,6925255
-Rhode Island,517757
-South Carolina,2513329
-South Dakota,422609
-Tennessee,3054534
-Texas,11317911
-Utah,1488289
-Vermont,367428
-Virginia,4460524
-Washington,4087631
-West Virginia,794652
-Wisconsin,3297352
-Wyoming,276765
-Alabama,2323304
-Alaska,359530
-Arkansas,1219069
-California,17495906
-Colorado,3256953
-Connecticut,1824280
-United States,158432595
-Arizona,3387326
+state,total_votes,population_over18
+Alabama,2323304,"3,814,879"
+Alaska,359530,"551,562"
+Arizona,3387326,"5,638,481"
+Arkansas,1219069,"2,317,649"
+California,17495906,"30,617,582"
+Colorado,3256953,"4,499,217"
+Connecticut,1824280,"2,837,847"
+Delaware,504010,"770,192"
+District of Columbia,344356,"577,581"
+Florida,11067456,"17,247,808"
+Georgia,4997716,"8,113,542"
+Hawaii,574469,"1,116,004"
+Idaho,868106,"1,338,864"
+Illinois,6038843,"9,853,946"
+Indiana,3033198,"5,164,245"
+Iowa,1690871,"2,428,229"
+Kansas,1375304,"2,213,064"
+Kentucky,2136768,"3,464,802"
+Louisiana,2148062,"3,561,164"
+Maine,819461,"1,095,370"
+Maryland,3037030,"4,710,993"
+Massachusetts,3631402,"5,539,703"
+Michigan,5539302,"7,842,924"
+Minnesota,3277171,"4,336,475"
+Mississippi,1315182,"2,277,566"
+Missouri,3025962,"4,766,843"
+Montana,605750,"840,190"
+Nebraska,956379,"1,458,334"
+Nevada,1405376,"2,387,517"
+New Hampshire,804430,"1,104,458"
+New Jersey,4564234,"6,943,612"
+New Mexico,923965,"1,620,991"
+New York,8613546,"15,425,262"
+North Carolina,5524801,"8,187,369"
+North Dakota,361819,"581,891"
+Ohio,5922202,"9,111,081"
+Oklahoma,1560699,"3,004,733"
+Oregon,2374321,"3,351,175"
+Pennsylvania,6925255,"10,167,376"
+Rhode Island,517757,"854,866"
+South Carolina,2513329,"4,037,531"
+South Dakota,422609,"667,558"
+Tennessee,3054534,"5,319,123"
+Texas,11317911,"21,596,071"
+Utah,1488289,"2,274,774"
+Vermont,367428,"509,984"
+Virginia,4460524,"6,674,671"
+Washington,4087631,"5,951,832"
+West Virginia,794652,"1,432,580"
+Wisconsin,3297352,"4,555,837"
+Wyoming,276765,"445,025"
