@@ -9,7 +9,7 @@
     },
     "hconcat": [
         {
-            "title": "Voter turnout",
+            "title": "Biden votes per state",
             "width": 600,
             "height": 600,
             "projection": { "type": "albersUsa" },
@@ -18,40 +18,41 @@
                     "lookup": "properties.name",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/president_state.csv"
+                            "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/clean_candidate_data.csv"
                         },
                         "key": "state",
-                        "fields": [ "total_votes" ]
+                        "fields": [ "biden_votes" ]
                     }
                 }
             ],
             "mark": { "type": "geoshape" },
             "encoding": {
                 "color": {
-                    "field": "total_votes",
+                    "field": "biden_votes",
                     "type": "quantitative",
-                    "title": "Total Votes",
+                    "title": "Total votes",
                     "scale": {
-                        "type": "log",
-                        "range": ["#ccece6", "#005824"]
+                        "type": "threshold",
+                        "domain": [10000, 20000, 30000, 40000, 50000],
+                        "range": ["#dadaeb", "#bcbddc", "#9e9ac8", "#756bb1", "#54278f"]
                     }
                 },
                 "tooltip": [
                     {
-                        "field": "properties.name", 
+                        "field": "properties.name",
                         "type": "nominal",
-                        "title": "Country"
+                        "title": "County"
                     },
                     {
-                        "field": "total_votes",
+                        "field": "biden_votes",
                         "type": "quantitative",
-                        "title": "Total Votes"
+                        "title": "Votes"
                     }
                 ]
             }
         },
         {
-            "title": "Population per state",
+            "title": "Trump votes per state",
             "width": 600,
             "height": 600,
             "projection": { "type": "albersUsa" },
@@ -60,14 +61,38 @@
                     "lookup": "properties.name",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/president_state.csv"
+                            "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/clean_candidate_data.csv"
                         },
                         "key": "state",
-                        "fields": [ "population_over18" ]
+                        "fields": [ "trump_votes" ]
                     }
                 }
             ],
-            "mark": { "type": "geoshape" }
+            "mark": { "type": "geoshape" },
+            "encoding": {
+                "color": {
+                    "field": "trump_votes",
+                    "type": "quantitative",
+                    "title": "Total votes",
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [10000, 20000, 30000, 40000, 50000],
+                        "range": ["#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "properties.name",
+                        "type": "nominal",
+                        "title": "County"
+                    },
+                    {
+                        "field": "trump_votes",
+                        "type": "quantitative",
+                        "title": "Votes"
+                    }
+                ]
+            }
         }
     ]
 }

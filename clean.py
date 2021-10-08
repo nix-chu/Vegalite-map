@@ -16,15 +16,20 @@ for row in csv_reader:
 
     if row[0] not in data.keys():
         # Add new State into dictionary, then store candidate:votes
-        data[row[0]] = { row[2]: row[4] }
+        data[row[0]] = { row[2]: int(row[4]) }
     else:
-        # Append new candidate:votes into existing State
-        data[row[0]][row[2]] = row[4]
+        if row[2] not in data[row[0]].keys():
+            # Add new candidate into inner dictionary
+            data[row[0]][row[2]] = int(row[4])
+        else:
+            # Add votes into existing state and candidate
+            data[row[0]][row[2]] += int(row[4])
 
 csv_file.close()
 f = open("clean_candidate_data.csv", 'w', newline="")
 csv_writer = csv.writer(f)
 header_row = ["state", "biden_votes", "trump_votes"]
+csv_writer.writerow(header_row)
 
 for state in data:
     new_row = [state, data[state]["Joe Biden"], data[state]["Donald Trump"]]
