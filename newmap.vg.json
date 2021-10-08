@@ -1,6 +1,5 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "projection": { "type": "albersUsa" },
     "data": {
         "url": "https://raw.githubusercontent.com/nix-chu/Vegalite-map/master/usa.topojson",
         "format": {
@@ -11,8 +10,9 @@
     "hconcat": [
         {
             "title": "Voter turnout",
-            "width": 500,
+            "width": 600,
             "height": 600,
+            "projection": { "type": "albersUsa" },
             "transform": [
                 {
                     "lookup": "properties.name",
@@ -52,8 +52,9 @@
         },
         {
             "title": "Population per state",
-            "width": 500,
+            "width": 600,
             "height": 600,
+            "projection": { "type": "albersUsa" },
             "transform": [
                 {
                     "lookup": "properties.name",
@@ -66,6 +67,7 @@
                     }
                 }
             ],
+            "mark": { "type": "geoshape" }
         }
     ]
 }
